@@ -1,0 +1,18 @@
+[
+    {
+        "image_file0": "coco/1.png",
+        "text0": "A dog",
+        "image_caption": "a black and white dog is looking at the camera",
+        "image_file1": "retrieval_coco/1.png",
+        "text1": "two dog",
+        "keyword": "doga black and white dog, dog black, black dog"
+    },
+    {
+        "image_file0": "coco/2.png",
+        "text0": "A cat",
+        "image_file1": "retrieval_coco/2.png",
+        "text1": "two cat",
+        "image_caption": "an orange and white cat is sitting on a table",
+        "keyword": "catan, cat, white cat"
+    }
+]
