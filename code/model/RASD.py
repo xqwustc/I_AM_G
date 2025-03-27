@@ -145,12 +145,9 @@ class RASD(torch.nn.Module):
 
 
     def get_user_history(self,dataset_name = 'movielens'):
-        # 获取用户交互数据
         function_name = f'process_{dataset_name}'
 
-        # 在当前模块中查找这个函数
         try:
-            # 如果函数存在，调用它
             process_function = globals()[function_name]
             user_history, item_set = process_function()
             return user_history, item_set
@@ -207,7 +204,6 @@ class RASD(torch.nn.Module):
     def get_text_kr_embedding(self,
                               data_path,
                               k_r=5):
-        # 从图像路径中获取文本embedding
         print('Loading text embeddings...')
         text_embedding_path = os.path.join(data_path, 'text_embedding.pth')
         text_embedding_map = torch.load(text_embedding_path)
@@ -221,7 +217,6 @@ class RASD(torch.nn.Module):
         embeddings_tensor = torch.stack(embeddings).to('cuda')
         batch_size, seq_len, emb_dim = embeddings_tensor.size()
 
-        # 假设query_embedding是您要查询的embedding，也需要转到CUDA上
         # index = names.index('356')
         # query_embedding = embeddings_tensor[index]
 
